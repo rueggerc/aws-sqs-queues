@@ -17,7 +17,7 @@ data "aws_caller_identity" "current_account" {
 
 
 ##################################
-# Queue: 
+# Queue: Sensor Data
 ##################################
 module "queue_sensor_data" {
     source                    = "./modules/standardqueue"
