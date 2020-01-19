@@ -29,3 +29,11 @@ module "queue_sensor_data" {
     tags                      = "${var.sensor_data_queue_tags}"
 }
 
+
+
+resource "aws_sqs_queue" "dummy_quue" {
+  name                      = "dummyQueue"
+  name_prefix                    = "dev"
+  delay_seconds             = "0"
+  receive_wait_time_seconds = 0
+}
