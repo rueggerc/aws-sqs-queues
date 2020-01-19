@@ -31,9 +31,9 @@ module "queue_sensor_data" {
 
 
 
-resource "aws_sqs_queue" "dummy_quue" {
-  # name                      = "dev-dummyQueue"
-  name_prefix                    = "dummy"
-  delay_seconds             = "0"
-  receive_wait_time_seconds = 0
-}
+# resource "aws_sqs_queue" "dummy_quue" {
+#   # name                      = "dev-dummyQueue"
+#   name_prefix                    = "dummy"
+#   delay_seconds             = "0"
+#   receive_wait_time_seconds = 0
+# }
