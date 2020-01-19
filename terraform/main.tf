@@ -28,12 +28,3 @@ module "queue_sensor_data" {
     retry_count               = "${var.sensor_data_queue_retry_count}"
     tags                      = "${var.sensor_data_queue_tags}"
 }
-
-
-
-# resource "aws_sqs_queue" "dummy_quue" {
-#   # name                      = "dev-dummyQueue"
-#   name_prefix                    = "dummy"
-#   delay_seconds             = "0"
-#   receive_wait_time_seconds = 0
-# }
