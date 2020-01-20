@@ -28,3 +28,30 @@ module "queue_sensor_data" {
     retry_count               = "${var.sensor_data_queue_retry_count}"
     tags                      = "${var.sensor_data_queue_tags}"
 }
+
+##################################
+# Queue: Response1
+##################################
+module "queue_response1" {
+    source                    = "./modules/standardqueue"
+    queue_name                = "${upper(var.response1_queue_name)}-${upper(var.env)}"
+    deadletter_queue_name     = "${upper(var.response1_deadletter_queue_name)}-${upper(var.env)}"
+    delay_seconds             = "${var.response1_queue_delay_seconds}"
+    message_retention_seconds = "${var.response1_queue_retention_seconds}"
+    retry_count               = "${var.response1_queue_retry_count}"
+    tags                      = "${var.response1_queue_tags}"
+}
+
+
+##################################
+# Queue: Response2
+##################################
+module "queue_response2" {
+    source                    = "./modules/standardqueue"
+    queue_name                = "${upper(var.response2_queue_name)}-${upper(var.env)}"
+    deadletter_queue_name     = "${upper(var.response2_deadletter_queue_name)}-${upper(var.env)}"
+    delay_seconds             = "${var.response2_queue_delay_seconds}"
+    message_retention_seconds = "${var.response2_queue_retention_seconds}"
+    retry_count               = "${var.response2_queue_retry_count}"
+    tags                      = "${var.response2_queue_tags}"
+}
